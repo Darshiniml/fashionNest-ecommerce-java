@@ -11,7 +11,7 @@ public class DBConnection {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String url =  "jdbc:mysql://172.31.128.1:3306/ecommerce?useSSL=false&allowPublicKeyRetrieval=true";
+            String url = "jdbc:mysql://localhost:3306/ecommerce";
 
             con = DriverManager.getConnection(url, "dockeruser", "Darsh123");
 
