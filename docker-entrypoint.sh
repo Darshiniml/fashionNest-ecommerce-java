@@ -18,6 +18,9 @@ echo "Setting up database..."
 mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY 'Darsh123';"
 mysql -u root -pDarsh123 -e "CREATE DATABASE IF NOT EXISTS ecommerce;"
 mysql -u root -pDarsh123 ecommerce < /ecommerce.sql
+mysql -u root -pDarsh123 -e "CREATE USER IF NOT EXISTS 'dockeruser'@'localhost' IDENTIFIED BY 'Darsh123';"
+mysql -u root -pDarsh123 -e "GRANT ALL PRIVILEGES ON ecommerce.* TO 'dockeruser'@'localhost';"
+mysql -u root -pDarsh123 -e "FLUSH PRIVILEGES;"
 
 echo "Database ready!"
 
