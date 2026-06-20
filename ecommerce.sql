@@ -97,3 +97,8 @@ INSERT INTO products (category_id, product_name, description, price, image_url) 
 (3, 'Kids Shoes', 'Comfort shoes', 1499, 'images/shoes/kid_shoes.jpg'),
 (3, 'Sports Shoes', 'Running shoes', 2499, 'images/shoes/sports_shoes.jpg'),
 (3, 'White Sports Shoes', 'Trendy shoes', 2599, 'images/shoes/white_sports_boys_shoe.jpg');
+
+
+UPDATE orders 
+SET order_status = 'Delivered' 
+WHERE order_id = 6;
